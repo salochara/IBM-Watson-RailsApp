@@ -1,0 +1,29 @@
+version: '3'
+services:
+  db:
+    image: postgres:10.5-alpine
+    ports:
+      - 5432:5432
+    volumes:
+      - ./tmp/postgres_data:/var/lib/postgresql/data
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: /bin/bash -c "rm -f /tmp/server.pid && bundle exec rails server -b 0.0.0.0 -P /tmp/server.pid"
+    ports:
+      - 3000:3000
+    depends_on:
+      - db
+    volumes:
+      - .:/app
+
+  # web:
+  #   build: .
+  #   image: salochara/ruby-app # <-- add this line
+  #   ports:
+  #     - 3000:3000
+  #   depends_on:
+  #     - db
+  #     # command: is in the image
+  #     # volumes: overwrite code in the image and don't work in k8s

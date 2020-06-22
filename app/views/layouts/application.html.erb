@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>IBM-Students</title>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  <%= stylesheet_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  <!--  Mobile responsive-->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="app/font-awesome-4.7.0/css/font-awesome.min.css">
+
+
+  <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+</head>
+
+<body id="page-top">
+  <!-- Page Wrapper -->
+  <div id="wrapper">
+    <!-- Sidebar -->
+    <%= render 'layouts/navigations/sidebar'  %>
+    <!-- Content Wrapper -->
+    <div id="content-wrapper" class="d-flex flex-column">
+      <!-- Main Content -->
+
+      <div id="content">
+        <!-- Topbar -->
+        <%=  render 'layouts/navigations/topbar'   %>
+
+        <!-- Begin Page Content -->
+        <div class="container-fluid">
+          <p class="notice"><%= notice %></p>
+          <p class="alert"><%= alert %></p>
+         <%= yield %>
+       </div>
+     </div>
+     <!-- Footer -->
+      <%= render 'layouts/footer'  %>
+   </div>
+
+ </div>
+
+ <%= render 'layouts/sb_extras' %>
+
+</body>
+
+
+</html>

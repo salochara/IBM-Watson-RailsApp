@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  rfc: MyString
+  name: MyString
+  situation: MyString
+  date: 2020-01-29
+
+two:
+  rfc: MyString
+  name: MyString
+  situation: MyString
+  date: 2020-01-29

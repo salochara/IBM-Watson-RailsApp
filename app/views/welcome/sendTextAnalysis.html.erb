@@ -1,0 +1,14 @@
+<div class="text-center">
+  <h1> Natural Language Understanding </h1>
+</div>
+
+
+<%= form_with(url: "/textanalyze", method: "post") do %>
+  <%= label_tag(:text, "Introduce tu texto:", class: "h4") %>
+  <%= text_area_tag(:text, "", size: "24x30", class:"text-area") %>
+  <br>
+  <br>
+  <div class="text-center">
+    <%= submit_tag("Analizar", :class=>"btn btn-primary text-center") %>
+  </div>
+<% end %>

@@ -1,0 +1,16 @@
+<div class="text-center">
+  <h1> Natural Language Understanding con URL </h1>
+</div>
+
+<%= form_with(url: "/urlsearch", method: "post") do %>
+  <%= label_tag(:link, "Búsqueda") %>
+  <%= text_field_tag :link,'', placeholder: "Introduce una URL", class: "text-area"  %>
+  <br>
+  <br>
+  <div class="text-center">
+    <%= submit_tag("Analizar", :class=>"btn btn-primary text-center") %>
+  </div>
+<% end %>
+
+
+

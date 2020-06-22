@@ -1,0 +1,60 @@
+<ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+
+  <!-- Sidebar - Brand -->
+  <a class="sidebar-brand d-flex align-items-center justify-content-center" href="<%= root_path %>">
+    <div class="sidebar-brand-icon rotate-n-15">
+      <i class="fas fa-laugh-wink"></i>
+    </div>
+    <div class="sidebar-brand-text mx-3">IBM WATSON</div>
+  </a>
+  <!-- Divider -->
+  <hr class="sidebar-divider my-0">
+
+  <!-- Nav Item - Dashboard -->
+  <li class="nav-item">
+    <%= link_to root_path, class: "nav-link" do %>
+      <i class="fas fa-fw fa-tachometer-alt"></i>
+      <span>Dashboard</span></a>
+    <% end %>
+  </li>
+
+  <!-- Divider -->
+  <hr class="sidebar-divider">
+
+
+  <!-- Heading -->
+  <div class="sidebar-heading">
+    IBM Watson Services
+  </div>
+
+
+  <!-- Nav Item - Charts -->
+  <li class="nav-item">
+    <a class="nav-link" href="<%= textAnalyze_path %>">
+      <%= fa_icon "language" %>
+      <span>Natural Language Understanding</span></a>
+  </li>
+
+  <!-- Nav Item - Tables -->
+  <li class="nav-item">
+    <a class="nav-link" href="<%= urlAnalysis_path  %>">
+      <%= fa_icon "wifi" %>
+      <span>Natural Language Understanding con URL</span></a>
+  </li>
+
+  <li class="nav-item">
+    <a class="nav-link" href="<%= speechToText_path  %>">
+      <%= fa_icon "comments" %>
+      <span>Speech to Text </span></a>
+  </li>
+
+  <li class="nav-item">
+    <a class="nav-link" href="<%= rss_ElPais_path %>">
+       <i class="fa fa-rss" aria-hidden="true"></i>
+      <span>El País</span></a>
+  </li>
+
+  <!-- Divider -->
+  <hr class="sidebar-divider d-none d-md-block">
+
+</ul>

@@ -1,0 +1,27 @@
+<h1>Speech to Text Service Resultado</h1>
+
+
+<br>
+
+
+<blockquote class="blockquote text-right">
+  <h2 class="mb-0 font-weight-bold">"<%= @recognition["results"][0]["alternatives"][0]["transcript"] %>"</h2>
+  <footer class="blockquote-footer">Gracias, Watson</footer>
+</blockquote>
+
+
+<div class="card shadow mb-4">
+  <div class="card-header py-3">
+    <h6 class="m-0 font-weight-bold text-primary">Speech to Text</h6>
+  </div>
+  <div class="card-body">
+    <% @recognition["results"][0]["alternatives"][0]["word_confidence"].each do |word|%>      <h4 class="small font-weight-bold"><%= word[0] %> <span class="float-right"> Relevance: <%= word[1].round(2) %></span></h4>
+      <div class="progress mb-4">
+        <% word[1] * 100 > 70 ? style_name = "progress-bar bg-success"  : style_name = "progress-bar bg-info" %>
+        <div class="<%= style_name %>" role="progressbar" style="width: <%= word[1] * 100%>%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+      </div>
+    <% end %>
+    <div class="progress-bar bg-info" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+
+  </div>
+</div>
