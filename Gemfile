@@ -94,6 +94,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'ibm_watson'
 
 gem 'bundler', '~> 2.1.4'
-gem 'carrierwave', '~> 2.0'
+gem 'carrierwave', '~> 2.1'
 gem 'web-console', '>= 3.3.0'
 gem 'rss'
